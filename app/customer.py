@@ -71,9 +71,10 @@ class Customer:
                 print(f"{amount} {product}s for {formated_price} dollars")
                 total_cost += product_price
 
+        self._money -= trip_cost
         print(f"Total cost is {round(total_cost, 2)} dollars\n"
               f"See you again!\n\n"
               f"{self._name} rides home\n"
-              f"{self._name} now has {self._money - trip_cost:.2f} dollars\n")
+              f"{self._name} now has {self._money:.2f} dollars\n")
 
         return True

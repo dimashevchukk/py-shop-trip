@@ -16,7 +16,9 @@ def shop_trip() -> None:
                 shops=shops,
                 fuel_price=fuel_price
             )
-            customer.make_purchases(
-                shop=shop,
-                trip_cost=trip_cost
-            )
+
+            if shop is not None:
+                customer.make_purchases(
+                    shop=shop,
+                    trip_cost=trip_cost
+                )
